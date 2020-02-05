@@ -234,13 +234,13 @@ class _EmptyQuerySuggestionSection extends StatelessWidget {
             errorBuilder: (context, result) => Container(),
             loadingBuilder: (context) {
               return SuggestionSection(
-                title: "热门搜索",
+                title: "popular searches",
                 content: Loader.buildSimpleLoadingWidget(context),
               );
             },
             builder: (context, result) {
               return SuggestionSection(
-                title: "热门搜索",
+                title: "popular searches",
                 content: SuggestionSectionContent.from(
                   words: result,
                   suggestionSelectedCallback: suggestionSelectedCallback,
@@ -248,7 +248,7 @@ class _EmptyQuerySuggestionSection extends StatelessWidget {
               );
             }),
         SuggestionSection(
-          title: '搜索记录',
+          title: 'Search history',
           content: SuggestionSectionContent.from(
             words: SearchHistory.of(context).histories,
             suggestionSelectedCallback: suggestionSelectedCallback,

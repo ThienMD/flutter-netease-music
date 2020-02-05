@@ -33,7 +33,7 @@ class _PageLoginWithPhoneState extends State<PageLoginWithPhone> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('手机号登录'),
+        title: Text('Mobile number login'),
         leading: IconButton(
           icon: const BackButtonIcon(),
           tooltip: MaterialLocalizations.of(context).backButtonTooltip,
@@ -55,7 +55,7 @@ class _PageLoginWithPhoneState extends State<PageLoginWithPhone> {
                 children: <Widget>[
                   SizedBox(height: 30),
                   Text(
-                    '未注册手机号登陆后将自动创建账号',
+                    'Account will be created automatically after login without registered mobile phone number',
                     style: Theme.of(context).textTheme.caption,
                   ),
                   Padding(
@@ -179,12 +179,12 @@ class _ButtonNextStep extends StatelessWidget {
       color: Theme.of(context).primaryColor,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       textColor: Theme.of(context).primaryTextTheme.body1.color,
-      child: Text('下一步'),
+      child: Text('Next step'),
       onPressed: () async {
         final model = ScopedModel.of<_InputModel>(context);
         final text = model.phoneNumber;
         if (text.isEmpty) {
-          toast('请输入手机号');
+          toast('Please enter phone number');
           return;
         }
         final result = await showLoaderOverlay(
@@ -199,11 +199,11 @@ class _ButtonNextStep extends StatelessWidget {
         }
         final value = result.asValue.value;
         if (!value.isExist) {
-          toast('注册流程开发未完成,欢迎贡献代码...');
+          toast('Registration process development is not complete, welcome to contribute code ...');
           return;
         }
         if (!value.hasPassword) {
-          toast('无密码登录流程的开发未完成,欢迎提出PR贡献代码...');
+          toast('The development of the passwordless login process has not been completed, please submit your PR contribution code...');
           return;
         }
         Navigator.pushNamed(context, pageLoginPassword, arguments: {'phone': text});

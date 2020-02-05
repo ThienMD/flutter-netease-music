@@ -33,7 +33,7 @@ class _PageWelcomeState extends State<PageWelcome> {
                 children: <Widget>[
                   _LeadingLayout(),
                   StretchButton(
-                    text: "手机号登录",
+                    text: "Mobile number login",
                     onTap: () async {
                       if (model.accept) {
                         final result = await Navigator.pushNamed(context, pageLogin);
@@ -44,7 +44,7 @@ class _PageWelcomeState extends State<PageWelcome> {
                     },
                   ),
                   StretchButton(
-                      text: "立即体验",
+                      text: "Try it now",
                       primary: false,
                       onTap: () {
                         if (model.accept) {
@@ -131,22 +131,22 @@ class _LoginLayout extends StatelessWidget {
         children: <Widget>[
           _LoginIcon(
             onTap: () {
-              toast("占位");
+              toast("Placeholder");
             },
           ),
           _LoginIcon(
             onTap: () {
-              toast("占位");
+              toast("Placeholder");
             },
           ),
           _LoginIcon(
             onTap: () {
-              toast("占位");
+              toast("Placeholder");
             },
           ),
           _LoginIcon(
             onTap: () {
-              toast("占位");
+              toast("Placeholder");
             },
           ),
         ],
@@ -189,7 +189,7 @@ class _LicenseModel extends Model {
 
   bool get accept {
     if (!_accept) {
-      toast('请先同意"用户协议"和"隐私政策"');
+      toast('Please agree to the "User Agreement" and "Privacy Policy"');
     }
     return _accept;
   }
@@ -214,11 +214,11 @@ class _LicenseAndPolicyState extends State<_LicenseAndPolicy> {
     super.initState();
     _licenseTapRecognizer = TapGestureRecognizer()
       ..onTap = () {
-        toast('用户协议');
+        toast('User Agreement');
       };
     _policyTapRecognizer = TapGestureRecognizer()
       ..onTap = () {
-        toast('隐私政策');
+        toast('Privacy Policy');
       };
   }
 
@@ -256,15 +256,15 @@ class _LicenseAndPolicyState extends State<_LicenseAndPolicy> {
               ),
             ),
             Text.rich(TextSpan(children: [
-              TextSpan(text: '同意'),
+              TextSpan(text: 'agree'),
               TextSpan(
-                text: '《用户协议》',
+                text: '《User Agreement》',
                 style: TextStyle(color: color.withOpacity(1)),
                 recognizer: _licenseTapRecognizer,
               ),
-              TextSpan(text: '和'),
+              TextSpan(text: 'with'),
               TextSpan(
-                text: '《隐私政策》',
+                text: '《Privacy Policy》',
                 style: TextStyle(color: color.withOpacity(1)),
                 recognizer: _policyTapRecognizer,
               ),

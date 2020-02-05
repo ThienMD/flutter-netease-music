@@ -7,29 +7,29 @@ class SettingThemePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("主题设置")),
+      appBar: AppBar(title: Text("Theme settings")),
       body: ListView(
         children: <Widget>[
           SettingGroup(
-            title: "主题模式",
+            title: "Theme mode",
             children: <Widget>[
               RadioListTile<ThemeMode>(
                 onChanged: (mode) => context.settings.themeMode = mode,
                 groupValue: context.settings.themeMode,
                 value: ThemeMode.system,
-                title: Text("跟随系统"),
+                title: Text("Follow system"),
               ),
               RadioListTile<ThemeMode>(
                 onChanged: (mode) => context.settings.themeMode = mode,
                 groupValue: context.settings.themeMode,
                 value: ThemeMode.light,
-                title: Text("亮色主题"),
+                title: Text("Bright theme"),
               ),
               RadioListTile<ThemeMode>(
                 onChanged: (mode) => context.settings.themeMode = mode,
                 groupValue: context.settings.themeMode,
                 value: ThemeMode.dark,
-                title: Text("暗色主题"),
+                title: Text("Dark theme"),
               )
             ],
           ),
@@ -43,7 +43,7 @@ class SettingThemePage extends StatelessWidget {
 class _DarkThemeSwitchGroup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SettingGroup(title: '暗色颜色主题选择', children: [
+    return SettingGroup(title: 'Dark color theme selection', children: [
       RadioListTile(
         onChanged: null,
         groupValue: null,
@@ -59,7 +59,7 @@ class _LightThemeSwitchGroup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SettingGroup(
-      title: "亮色主题颜色选择",
+      title: "Bright theme color selection",
       children: <Widget>[...quietThemes.map((theme) => _RadioLightThemeTile(themeData: theme))],
     );
   }

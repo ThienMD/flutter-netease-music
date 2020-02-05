@@ -12,16 +12,16 @@ class SettingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('设置'),
+        title: Text('Set up'),
         titleSpacing: 0,
       ),
       body: ListView(
         children: <Widget>[
           SettingGroup(
-            title: '通用',
+            title: 'Universal',
             children: <Widget>[
               ListTile(
-                title: Text('更换主题'),
+                title: Text('Change theme'),
                 onTap: () => Navigator.pushNamed(context, ROUTE_SETTING_THEME),
               ),
               _CopyRightCheckBox(),
@@ -41,7 +41,7 @@ class _CopyRightCheckBox extends StatelessWidget {
       onChanged: (value) {
         Settings.of(context).showCopyrightOverlay = value;
       },
-      title: Text('隐藏版权浮层'),
+      title: Text('Hide copyright floating layer'),
     );
   }
 }

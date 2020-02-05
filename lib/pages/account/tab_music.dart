@@ -36,8 +36,8 @@ class _TabMusicState extends State<TabMusic>
           children: <Widget>[
             Row(
               children: <Widget>[
-                Expanded(child: _Header(title: '歌单(${created.length})')),
-                Text('共被收藏${widget.profile.playlistBeSubscribedCount}次',
+                Expanded(child: _Header(title: 'song list(${created.length})')),
+                Text('Totally favorited ${widget.profile.playlistBeSubscribedCount} Times',
                     style: Theme.of(context).textTheme.caption),
                 SizedBox(width: 16),
               ],
@@ -48,7 +48,7 @@ class _TabMusicState extends State<TabMusic>
                   enableHero: false,
                 )),
             if (subscribed.isNotEmpty) ...[
-              _Header(title: '收藏的歌单(${subscribed.length})'),
+              _Header(title: 'Favorite playlist(${subscribed.length})'),
               ...subscribed.map((playlist) => PlaylistTile(
                     playlist: playlist,
                     enableMore: false,

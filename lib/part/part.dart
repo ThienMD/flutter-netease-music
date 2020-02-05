@@ -16,5 +16,5 @@ export 'package:quiet/pages/account/account.dart';
 export 'package:scoped_model/scoped_model.dart';
 
 void notImplemented(BuildContext context) {
-  toast('页面未完成');
+  toast('Page incomplete');
 }

@@ -19,7 +19,7 @@ class PlayingListDialogState extends State<PlayingListDialog> {
     super.initState();
     final playingList = context.player.value.playingList;
     final music = context.player.value.current;
-    assert(music != null, '展示播放列表时，当前音乐不能为空！');
+    assert(music != null, 'When displaying a playlist, the current music cannot be empty! ');
     double offset = playingList.indexOf(music) * _HEIGHT_MUSIC_TILE;
     _controller = ScrollController(initialScrollOffset: offset);
   }
@@ -65,15 +65,15 @@ class _Header extends StatelessWidget {
     switch (playMode) {
       case PlayMode.single:
         icon = Icons.repeat_one;
-        name = "单曲循环";
+        name = "Single cycle";
         break;
       case PlayMode.sequence:
         icon = Icons.repeat;
-        name = "列表循环";
+        name = "List loop";
         break;
       case PlayMode.shuffle:
         icon = Icons.shuffle;
-        name = "随机播放";
+        name = "Shuffe Playback";
         break;
     }
     return Material(
@@ -100,14 +100,14 @@ class _Header extends StatelessWidget {
                     return;
                   }
                   if (succeed) {
-                    showSimpleNotification(Text("添加到收藏成功"));
+                    showSimpleNotification(Text("Added to favorites"));
                   } else {
-                    showSimpleNotification(Text("添加到收藏失败"),
+                    showSimpleNotification(Text("Added to favorites failed"),
                         leading: Icon(Icons.error), background: Theme.of(context).errorColor);
                   }
                 },
                 icon: Icon(Icons.add_box),
-                label: Text("收藏全部")),
+                label: Text("Save all")),
             IconButton(
                 icon: Icon(Icons.delete_outline),
                 onPressed: () async {

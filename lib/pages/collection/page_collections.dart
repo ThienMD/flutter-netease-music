@@ -13,13 +13,13 @@ class MyCollectionPage extends StatelessWidget {
       length: 4,
       child: Scaffold(
         appBar: AppBar(
-          title: Text('我的收藏'),
+          title: Text('My collection'),
           bottom: TabBar(
             tabs: [
-              Tab(text: '专辑'),
-              Tab(text: '歌手'),
-              Tab(text: '视频'),
-              Tab(text: '专栏'),
+              Tab(text: 'Album'),
+              Tab(text: 'Singer'),
+              Tab(text: 'Video'),
+              Tab(text: 'Column'),
             ],
             indicator:
                 UnderlineTabIndicator(insets: EdgeInsets.only(bottom: 4)),

@@ -17,19 +17,19 @@ class PageNeedLogin extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          Text('当前页面需要登陆', style: TextStyle(fontWeight: FontWeight.bold)),
+          Text('Current page requires login', style: TextStyle(fontWeight: FontWeight.bold)),
           ButtonBar(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               FlatButton(
                   onPressed: () => Navigator.pop(context),
                   child: Text(
-                    '取消',
+                    'cancel',
                     style: TextStyle(color: Theme.of(context).errorColor),
                   )),
               RaisedButton(
                 onPressed: () => Navigator.pushNamed(context, pageLogin),
-                child: Text('前往登陆页面'),
+                child: Text('Go to landing page'),
               )
             ],
           )
@@ -38,7 +38,7 @@ class PageNeedLogin extends StatelessWidget {
     );
 
     if (Scaffold.of(context, nullOk: true) == null) {
-      widget = Scaffold(body: widget, appBar: AppBar(title: Text('需要登陆')));
+      widget = Scaffold(body: widget, appBar: AppBar(title: Text('Need to log in')));
     }
     return widget;
   }

@@ -144,7 +144,7 @@ class _AlbumDetailHeader extends StatelessWidget {
                     InkWell(
                         child: Padding(
                           padding: const EdgeInsets.only(top: 4, bottom: 4),
-                          child: Text("歌手: ${artist.map((a) => a.name).join('/')}"),
+                          child: Text("Singer: ${artist.map((a) => a.name).join('/')}"),
                         ),
                         onTap: () {
                           launchArtistDetailPage(context, artist);

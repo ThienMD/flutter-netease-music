@@ -54,7 +54,7 @@ class CommentList extends Model with AutoLoadMoreMixin {
       final hotComments =
           (value["hotComments"] as List).map((e) => Comment.fromJsonMap(e));
       if (hotComments.isNotEmpty) {
-        list.add(Pair(_TYPE_HEADER, "热门评论")); //hot comment header
+        list.add(Pair(_TYPE_HEADER, "热门Comment")); //hot comment header
         list.addAll(hotComments);
       }
 
@@ -63,7 +63,7 @@ class CommentList extends Model with AutoLoadMoreMixin {
       }
 
       total = value['total'];
-      list.add(Pair(_TYPE_HEADER, "最新评论($total)")); //latest comment header
+      list.add(Pair(_TYPE_HEADER, "最新Comment($total)")); //latest comment header
       list.addAll(comments);
 
       return LoadMoreResult(list,
@@ -93,7 +93,7 @@ class CommentList extends Model with AutoLoadMoreMixin {
             padding: EdgeInsets.symmetric(vertical: 40),
             child: Center(
               child: Text(
-                "暂无评论，欢迎抢沙发",
+                "暂无Comment，欢迎抢沙发",
                 style: TextStyle(color: Colors.black54),
               ),
             ),

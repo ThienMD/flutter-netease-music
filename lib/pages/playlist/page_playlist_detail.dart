@@ -370,7 +370,7 @@ class DetailHeader extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
-                    _HeaderAction(Icons.comment, commentCount > 0 ? commentCount.toString() : "评论", onCommentTap),
+                    _HeaderAction(Icons.comment, commentCount > 0 ? commentCount.toString() : "Comment", onCommentTap),
                     _HeaderAction(Icons.share, shareCount > 0 ? shareCount.toString() : "分享", onShareTap),
                     _HeaderAction(Icons.file_download, '下载', null),
                     _HeaderAction(Icons.check_box, "多选", onSelectionTap),

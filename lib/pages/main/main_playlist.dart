@@ -60,7 +60,7 @@ class _MainPlaylistState extends State<MainPlaylistPage> with AutomaticKeepAlive
               return ListView(children: [
                 _PinnedHeader(),
                 _ExpansionPlaylistGroup.fromPlaylist(
-                  "创建的歌单",
+                  "Created playlist",
                   created,
                   onAddClick: () {
                     toast('add: todo');
@@ -70,7 +70,7 @@ class _MainPlaylistState extends State<MainPlaylistPage> with AutomaticKeepAlive
                   },
                 ),
                 _ExpansionPlaylistGroup.fromPlaylist(
-                  "收藏的歌单",
+                  "Favourite playlist",
                   subscribed,
                   onMoreClick: () {
                     toast('more: todo');

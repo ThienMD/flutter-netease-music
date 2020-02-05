@@ -117,7 +117,7 @@ class _ItemLoadMore extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(left: 8),
           ),
-          Text("正在加载更多评论...")
+          Text("正在加载更多Comment...")
         ],
       ),
     );
@@ -135,7 +135,7 @@ class _ItemMoreHot extends StatelessWidget {
         padding: EdgeInsets.symmetric(vertical: 16),
         child: Center(
           child: Text(
-            "全部精彩评论 >",
+            "全部精彩Comment >",
             style: Theme.of(context).textTheme.caption,
           ),
         ),

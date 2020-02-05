@@ -112,9 +112,9 @@ class _AppDrawerHeader extends StatelessWidget {
               Icons.exit_to_app,
               color: Theme.of(context).primaryIconTheme.color,
             ),
-            tooltip: "退出登陆",
+            tooltip: "Sign out",
             onPressed: () async {
-              if (await showConfirmDialog(context, Text('确认退出登录吗？'), positiveLabel: '退出登录')) {
+              if (await showConfirmDialog(context, Text('Confirm Logout？'), positiveLabel: 'Sign out')) {
                 UserAccount.of(context, rebuildOnChange: false).logout();
               }
             },
@@ -137,8 +137,8 @@ class _AppDrawerHeader extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                Text("登陆网易云音乐"),
-                Text("手机电脑多端同步,尽享海量高品质音乐"),
+                Text("Log in to Netease Cloud Music"),
+                Text("Mobile and computer multi-terminal synchronization, enjoy massive high-quality music"),
                 SizedBox(height: 8),
                 FlatButton(
                     shape: RoundedRectangleBorder(
@@ -149,7 +149,7 @@ class _AppDrawerHeader extends StatelessWidget {
                       Navigator.pushNamed(context, pageLogin);
                     },
                     textColor: Theme.of(context).primaryTextTheme.body1.color,
-                    child: Text("立即登陆"))
+                    child: Text("Sign in now"))
               ],
             ),
           ),

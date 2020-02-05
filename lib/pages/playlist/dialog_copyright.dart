@@ -10,7 +10,7 @@ class DialogNoCopyRight extends StatelessWidget {
           Image(image: AssetImage("assets/no_copy_right.png")),
           Padding(padding: EdgeInsets.only(top: 16)),
           Text(
-            "抱歉,该资源暂时不能播放.",
+            "Sorry, this resource is temporarily unavailable.",
             textAlign: TextAlign.center,
           ),
           Padding(padding: EdgeInsets.only(top: 16))

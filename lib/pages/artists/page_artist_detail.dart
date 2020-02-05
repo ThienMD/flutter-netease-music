@@ -27,13 +27,13 @@ class ArtistDetailPage extends StatelessWidget {
         loadTask: () => neteaseRepository.artistDetail(artistId),
         loadingBuilder: (context) {
           return Scaffold(
-            appBar: AppBar(title: Text("歌手")),
+            appBar: AppBar(title: Text("Singer")),
             body: Loader.buildSimpleLoadingWidget(context),
           );
         },
         errorBuilder: (context, result) {
           return Scaffold(
-            appBar: AppBar(title: Text("歌手")),
+            appBar: AppBar(title: Text("Singer")),
             body: Loader.buildSimpleFailedWidget(context, result),
           );
         },
@@ -113,9 +113,9 @@ class _PageHotSongsState extends State<_PageHotSongs>
                   SizedBox(width: 8),
                   Icon(Icons.add_box),
                   SizedBox(width: 8),
-                  Expanded(child: Text("收藏热门${widget.musicList.length}单曲")),
+                  Expanded(child: Text("Favorite ${widget.musicList.length} single")),
                   FlatButton(
-                      child: Text("多选"),
+                      child: Text("Multiple choice"),
                       onPressed: () {
                         Navigator.of(context)
                             .push(MaterialPageRoute(builder: (context) {
@@ -137,7 +137,7 @@ class _PageHotSongsState extends State<_PageHotSongs>
     super.build(context);
     if (widget.musicList.isEmpty) {
       return Container(
-        child: Center(child: Text("该歌手无热门曲目")),
+        child: Center(child: Text("No hot tracks for this singer")),
       );
     }
     return MusicTileConfiguration(

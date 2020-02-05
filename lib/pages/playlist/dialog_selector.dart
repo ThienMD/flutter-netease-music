@@ -81,7 +81,7 @@ class PlaylistSelectorDialog extends StatelessWidget {
         children: <Widget>[
           Padding(padding: EdgeInsets.only(left: 16)),
           Expanded(
-              child: Text("收藏到歌单", style: Theme.of(context).textTheme.title))
+              child: Text("Add to playlist", style: Theme.of(context).textTheme.title))
         ],
       ),
     );
@@ -152,14 +152,14 @@ class PlaylistSelectorDialog extends StatelessWidget {
                 children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16),
-                    child: Text(result.error.toString() ?? "加载失败"),
+                    child: Text(result.error.toString() ?? "Failed to load"),
                   ),
                   SizedBox(height: 16),
                   RaisedButton(
                       onPressed: () {
                         Loader.of(context).refresh();
                       },
-                      child: Text("重试")),
+                      child: Text("Retry")),
                   SizedBox(height: 32),
                 ],
               ),
@@ -183,7 +183,7 @@ class PlaylistSelectorDialog extends StatelessWidget {
                   ),
                 ),
               ),
-              Text("新建歌单"),
+              Text("New playlist"),
               null, () async {
             PlaylistDetail created = await showDialog(
                 context: context,
@@ -208,7 +208,7 @@ class PlaylistSelectorDialog extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
                 Text(p.name),
-                Text("共${p.trackCount}首"), () {
+                Text("Total ${p.trackCount} first"), () {
               Navigator.of(context).pop(p.id);
             });
           }));

@@ -61,7 +61,7 @@ class ArtistSelectionDialog extends StatelessWidget {
         constraints: BoxConstraints(maxHeight: 356),
         child: SimpleDialog(
           title: Container(
-            child: Text("请选择要查看的歌手"),
+            child: Text("Please select the artist to view"),
             constraints: BoxConstraints(
                 minWidth: MediaQuery.of(context).size.width * 0.8),
           ),

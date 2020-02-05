@@ -14,14 +14,14 @@ class _MyDjPageState extends State<MyDjPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('我的电台'),
+        title: Text('My radio'),
       ),
       body: ListView(
         children: <Widget>[
           _ListTitle(
-              title: '我创建的电台(${Counter.of(context).createDjRadioCount})'),
+              title: 'Radio station i created(${Counter.of(context).createDjRadioCount})'),
           _SectionMyCreated(),
-          _ListTitle(title: '我订阅的电台(${Counter.of(context).djRadioCount})'),
+          _ListTitle(title: 'Radio stations i subscribe to(${Counter.of(context).djRadioCount})'),
           _SectionSubscribed(),
         ],
       ),
@@ -72,7 +72,7 @@ class DjTile extends StatelessWidget {
                     ),
                     Spacer(),
                     Text(
-                      data['lastProgramName'] ?? '暂无更新',
+                      data['lastProgramName'] ?? 'No updates',
                       style: Theme.of(context).textTheme.caption,
                     ),
                     SizedBox(height: 4),

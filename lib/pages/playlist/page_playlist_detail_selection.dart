@@ -98,7 +98,7 @@ class PlaylistSelectionPageState extends State<PlaylistSelectionPage> {
               FlatButton(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[Icon(Icons.play_circle_outline), const SizedBox(height: 2.0), Text("下一首播放")],
+                  children: <Widget>[Icon(Icons.play_circle_outline), const SizedBox(height: 2.0), Text("Next play")],
                 ),
                 onPressed: () async {
                   await Stream.fromIterable(selectedList).forEach((e) {
@@ -129,7 +129,7 @@ class PlaylistSelectionPageState extends State<PlaylistSelectionPage> {
                   : FlatButton(
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
-                        children: <Widget>[Icon(Icons.delete_outline), const SizedBox(height: 2.0), Text("删除")],
+                        children: <Widget>[Icon(Icons.delete_outline), const SizedBox(height: 2.0), Text("Delete")],
                       ),
                       onPressed: () async {
                         final succeed = await showLoaderOverlay(context, widget.onDelete(selectedList));

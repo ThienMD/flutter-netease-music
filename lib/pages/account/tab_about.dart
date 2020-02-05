@@ -19,10 +19,10 @@ class _TabAboutState extends State<TabAbout>
     super.build(context);
     return ListView(
       children: <Widget>[
-        _Header(title: '个人信息'),
+        _Header(title: 'Personal information'),
         _UserInformation(widget.user),
         const SizedBox(height: 10),
-        _Header(title: '个人介绍'),
+        _Header(title: 'self introduction'),
         _UserDescription(description: widget.user.profile.description),
       ],
     );
@@ -45,11 +45,11 @@ class _UserInformation extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             const SizedBox(height: 4),
-            Text('等级: ${user.level}'),
+            Text('grade: ${user.level}'),
             const SizedBox(height: 4),
-            Text('性别: ${user.profile.gender}'),
+            Text('gender: ${user.profile.gender}'),
             const SizedBox(height: 4),
-            Text('地区: ${user.profile.city}'),
+            Text('area: ${user.profile.city}'),
           ],
         ),
       ),

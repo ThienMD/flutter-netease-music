@@ -25,7 +25,7 @@ class _PlaylistEditPageState extends State<PlaylistEditPage> {
     return Scaffold(
       appBar: AppBar(
         leading: BackButton(),
-        title: Text("编辑歌单信息"),
+        title: Text("Edit playlist information"),
       ),
       body: Builder(builder: (context) {
         return Column(
@@ -40,7 +40,7 @@ class _PlaylistEditPageState extends State<PlaylistEditPage> {
                 padding: EdgeInsets.symmetric(horizontal: 8),
                 child: Row(
                   children: <Widget>[
-                    Expanded(child: Text("更换封面", style: style)),
+                    Expanded(child: Text("Change cover", style: style)),
                     Image(image: CachedImage(widget.playlist.coverUrl), height: 56, width: 56)
                   ],
                 ),
@@ -57,7 +57,7 @@ class _PlaylistEditPageState extends State<PlaylistEditPage> {
                 height: 56,
                 padding: EdgeInsets.symmetric(horizontal: 8),
                 child: Row(
-                  children: <Widget>[Expanded(child: Text("名称", style: style)), Text(widget.playlist.name)],
+                  children: <Widget>[Expanded(child: Text("name", style: style)), Text(widget.playlist.name)],
                 ),
               ),
             ),
@@ -71,8 +71,8 @@ class _PlaylistEditPageState extends State<PlaylistEditPage> {
                 padding: EdgeInsets.symmetric(horizontal: 8),
                 child: Row(
                   children: <Widget>[
-                    Expanded(child: Text("标签", style: style)),
-                    Text("功能未实现", style: Theme.of(context).textTheme.caption)
+                    Expanded(child: Text("label", style: style)),
+                    Text("Function is not implemented", style: Theme.of(context).textTheme.caption)
                   ],
                 ),
               ),
@@ -86,7 +86,7 @@ class _PlaylistEditPageState extends State<PlaylistEditPage> {
                 height: 56,
                 padding: EdgeInsets.symmetric(horizontal: 8),
                 child: Row(
-                  children: <Widget>[Expanded(child: Text("描述", style: style)), Text(widget.playlist.name)],
+                  children: <Widget>[Expanded(child: Text("description", style: style)), Text(widget.playlist.name)],
                 ),
               ),
             ),
@@ -133,7 +133,7 @@ class _PlaylistNameEditPageState extends State<_PlaylistNameEditPage> {
     return Scaffold(
       appBar: AppBar(
         leading: BackButton(),
-        title: Text("歌单名称"),
+        title: Text("Playlist name"),
         actions: <Widget>[
           FlatButton(
               onPressed: () async {
@@ -147,7 +147,7 @@ class _PlaylistNameEditPageState extends State<_PlaylistNameEditPage> {
                   } else {
                     setState(() {
                       widget.playlist.name = name;
-                      error = "修改失败";
+                      error = "fail to edit";
                     });
                   }
                 } catch (msg) {
@@ -157,7 +157,7 @@ class _PlaylistNameEditPageState extends State<_PlaylistNameEditPage> {
                   });
                 }
               },
-              child: Text("保存"),
+              child: Text("Save"),
               textColor: Theme.of(context).primaryTextTheme.body1.color)
         ],
       ),
@@ -173,7 +173,7 @@ class _PlaylistNameEditPageState extends State<_PlaylistNameEditPage> {
               focusNode: _focusNode,
               textInputAction: TextInputAction.done,
               decoration: InputDecoration(
-                  hintText: "编辑歌单名称",
+                  hintText: "Edit playlist name",
                   errorText: error,
                   suffixIcon: IconButton(
                       icon: Icon(Icons.close),
@@ -182,7 +182,7 @@ class _PlaylistNameEditPageState extends State<_PlaylistNameEditPage> {
                       })),
               validator: (v) {
                 if (v.isEmpty) {
-                  return "歌单名不能为空";
+                  return "Song name cannot be empty";
                 }
                 return null;
               },

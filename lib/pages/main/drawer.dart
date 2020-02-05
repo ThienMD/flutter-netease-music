@@ -17,7 +17,7 @@ class _Drawer extends StatelessWidget {
                     children: <Widget>[
                       ListTile(
                         leading: Icon(Icons.settings),
-                        title: Text("设置"),
+                        title: Text("Setup"),
                         onTap: () {
                           Navigator.pushNamed(context, ROUTE_SETTING);
                         },

@@ -99,15 +99,15 @@ class _UserDetailAppBar extends StatelessWidget {
             SizedBox(height: 6),
             Row(children: <Widget>[
               InkWell(
-                  child: Text('关注:${user.profile.follows}'),
+                  child: Text('Attention:${user.profile.follows}'),
                   onTap: () {
-                    toast('关注');
+                    toast('Attention');
                   }),
               VerticalDivider(),
               InkWell(
-                child: Text('粉丝:${user.profile.followeds}'),
+                child: Text('Fan:${user.profile.followeds}'),
                 onTap: () {
-                  toast('粉丝');
+                  toast('Fan');
                 },
               ),
             ]),
@@ -135,9 +135,9 @@ class _UserDetailAppBar extends StatelessWidget {
       forceElevated: false,
       bottom: RoundedTabBar(
         tabs: <Widget>[
-          Tab(text: '音乐(${user.profile.playlistCount})'),
-          Tab(text: '动态(${user.profile.eventCount})'),
-          Tab(text: '关于TA'),
+          Tab(text: 'Music(${user.profile.playlistCount})'),
+          Tab(text: 'Dynamic(${user.profile.eventCount})'),
+          Tab(text: 'About TA'),
         ],
       ),
     );

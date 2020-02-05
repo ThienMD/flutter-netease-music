@@ -21,10 +21,10 @@ class ArtistHeader extends StatelessWidget {
       forceElevated: false,
       bottom: RoundedTabBar(
         tabs: <Widget>[
-          Tab(text: "热门单曲"),
-          Tab(text: "专辑${artist.albumSize}"),
-          Tab(text: "视频${artist.mvSize}"),
-          Tab(text: "艺人信息"),
+          Tab(text: "Popular singles"),
+          Tab(text: "Album${artist.albumSize}"),
+          Tab(text: "Video${artist.mvSize}"),
+          Tab(text: "Artist information"),
         ],
       ),
       actions: <Widget>[
@@ -53,7 +53,7 @@ class _ArtistFlexHeader extends StatelessWidget {
             Spacer(),
             Text('${artist.name}' + (artist.alias.isEmpty ? '' : '(${artist.alias[0]})'),
                 style: TextStyle(fontSize: 20)),
-            Text('歌曲数量:${artist.musicSize}'),
+            Text('Number of songs:${artist.musicSize}'),
           ]),
         ),
         builder: (context, t) {
@@ -65,9 +65,9 @@ class _ArtistFlexHeader extends StatelessWidget {
             actions: <Widget>[
               IconButton(
                   icon: Icon(Icons.share),
-                  tooltip: "分享",
+                  tooltip: "Share it",
                   onPressed: () {
-                    toast('分享');
+                    toast('Share it');
                   })
             ],
           );

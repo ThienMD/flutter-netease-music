@@ -68,7 +68,7 @@ class PlaylistTile extends StatelessWidget {
                     style: TextStyle(fontSize: 15),
                   ),
                   Padding(padding: EdgeInsets.only(top: 4)),
-                  Text("${playlist.trackCount}首",
+                  Text("${playlist.trackCount} first",
                       style: Theme.of(context).textTheme.caption),
                   Spacer(),
                 ],
@@ -78,10 +78,10 @@ class PlaylistTile extends StatelessWidget {
               PopupMenuButton<PlaylistOp>(
                 itemBuilder: (context) {
                   return [
-                    PopupMenuItem(child: Text("分享"), value: PlaylistOp.share),
+                    PopupMenuItem(child: Text("Share it"), value: PlaylistOp.share),
                     PopupMenuItem(
-                        child: Text("编辑歌单信息"), value: PlaylistOp.edit),
-                    PopupMenuItem(child: Text("删除"), value: PlaylistOp.delete),
+                        child: Text("Edit playlist information"), value: PlaylistOp.edit),
+                    PopupMenuItem(child: Text("Delete"), value: PlaylistOp.delete),
                   ];
                 },
                 onSelected: (op) {

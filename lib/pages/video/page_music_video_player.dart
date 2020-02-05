@@ -18,7 +18,7 @@ import 'video_player_model.dart';
 
 ///MV详情页面
 ///顶部是视频播放
-///下方显示评论
+///下方显示Comment
 class MusicVideoPlayerPage extends StatelessWidget {
   final int mvId;
 
@@ -366,7 +366,7 @@ class _InformationSectionState extends State<_InformationSection> {
   }
 }
 
-///mv 点赞/收藏/评论/分享
+///mv 点赞/收藏/Comment/分享
 class _ActionsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
